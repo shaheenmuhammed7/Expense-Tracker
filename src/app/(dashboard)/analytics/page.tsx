@@ -119,7 +119,7 @@ export default function AnalyticsPage() {
                 <Tooltip 
                   cursor={{fill: 'rgba(255, 255, 255, 0.05)'}}
                   contentStyle={{ backgroundColor: 'var(--card)', borderColor: 'var(--border)', borderRadius: '8px' }}
-                  formatter={(value: number) => [`$${value}`, 'Spent']}
+                  formatter={(value: any) => [`$${Number(value).toFixed(2)}`, "Spent"]}
                 />
                 <Bar dataKey="amount" fill="var(--primary)" radius={[4, 4, 0, 0]} />
               </BarChart>
